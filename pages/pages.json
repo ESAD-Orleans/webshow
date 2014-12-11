@@ -1,0 +1,41 @@
+{
+
+	"delayPageDown" : 1000,
+	"delayInterTitle" : 2000,
+	"scrollRatio": 0.9,
+
+	"screensizes": [
+		{
+			"id": "default",
+			"width": "100%",
+			"height": "100%"
+		},
+		{
+			"id": "mobile",
+			"width": 320,
+			"height": 480
+		}
+	],
+
+	"screensizesSet" : ["default"],
+
+	"pages": [
+		{
+			"url": "pages/sample.html",
+			"author":"Arthur Violy",
+			"title":"Premier essai",
+			"screensizesSet":["default"]
+		},
+		{
+			"url": "pages/sample2.html",
+			"author": "Arthur Violy",
+			"title": "Deuxieme essai",
+			"screensizesSet": [
+				"mobile",
+				"default",
+				{"width": 800, "height": 600}
+			]
+		}
+	]
+
+}

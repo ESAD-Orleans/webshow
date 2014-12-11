@@ -1,0 +1,26 @@
+{
+  "name": "webshow",
+  "version": "0.0.0",
+  "authors": [
+    "Arthur Violy <arthur@violy.net>"
+  ],
+  "description": "present multiple html simple web pages exercices of students",
+  "main": "index.html",
+  "keywords": [
+    "web"
+  ],
+  "license": "Art Libre 2",
+  "homepage": "http://esad-orleans.fr",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0"
+  }
+}
