@@ -1,8 +1,10 @@
 {
 
-	"delayPageDown" : 1000,
-	"delayInterTitle" : 2000,
-	"scrollRatio": 0.9,
+	"delayPageDown" : 3000,
+	"delayInterTitle" : 3000,
+	"scrollRatio": 1,
+	"scrollRandomSteps" : [1],
+	"yoyo": true,
 
 	"screensizes": [
 		{
