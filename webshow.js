@@ -13,6 +13,7 @@ $(document).ready(function () {
 		scrollRandomSteps = [1],
 		screensizesIndex = 0,
 		json = null,
+		scrollTime = 1000,
 		delayPageDown = 3000,
 		delayInterTitle = 3000,
 		direction = 1,// direction [1] -> DOWN, [-1] -> UP
@@ -36,27 +37,22 @@ $(document).ready(function () {
 		function PageDown(){
 			var $body = _$('body'),
 				randomStep = scrollRandomSteps[Math.floor(Math.random()* scrollRandomSteps.length)];
-			var scrollMax = $body.height() - $page.height()* (1/2);
+			var scrollMax = $body.height() - $page.height()* (1/2),
 				scrollTarget = $body.scrollTop() + direction*$page.height()* scrollRatio * randomStep;
 
-			console.log(scrollTarget);
 			//
 			if(scrollTarget<0){
 				direction = 1;
-				$body.delay(delayPageDown).animate({scrollTop: 0}, function(){setTimeout(NextSize,delayPageDown)});
+				$body.delay(delayPageDown).animate({scrollTop: 0}, scrollTime, function(){setTimeout(NextSize,delayPageDown)});
 			}else if(scrollTarget>scrollMax){
 				if(yoyo){
 					direction = -1;
-					$body.delay(delayPageDown).animate({
-						scrollTop: scrollTarget
-					}, PageDown)
+					$body.delay(delayPageDown).animate({scrollTop: scrollTarget}, scrollTime, PageDown)
 				}else{
-					$body.delay(delayPageDown).animate({scrollTop: 0}, function () {setTimeout(NextSize, delayPageDown)});
+					$body.delay(delayPageDown).animate({scrollTop: 0}, scrollTime, function () {setTimeout(NextSize, delayPageDown)});
 				}
 			}else{
-				$body.delay(delayPageDown).animate({
-					scrollTop: scrollTarget
-				}, PageDown)
+				$body.delay(delayPageDown).animate({scrollTop: scrollTarget}, scrollTime, PageDown)
 			}
 		}
 

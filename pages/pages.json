@@ -3,6 +3,7 @@
 	"delayPageDown" : 3000,
 	"delayInterTitle" : 3000,
 	"scrollRatio": 1,
+	"scrollTime": 2000,
 	"scrollRandomSteps" : [1],
 	"yoyo": true,
 
